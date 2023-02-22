@@ -7,3 +7,7 @@
 # review when someone opens a pull request.
 * @archishmanSingha
 
+*.html @archishmanSingha
+
+*.txt @archishmanSingha
+
