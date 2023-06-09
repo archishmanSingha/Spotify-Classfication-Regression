@@ -6,6 +6,7 @@
 
 * A classification problem that aims to predict the top genre that a song belongs to.
 
+
 <h3>Data Source:</h3>
 
 * Regression Problem: https://www.kaggle.com/t/a87732e08c094e4db43b7b7b9b68cc67
@@ -27,13 +28,42 @@
 
 * **Principal Component Analysis (PCA)** -  PCA made little difference. Multiplying feature attributes,RandomOverSampling or applying other mathmematical operations on features was not useful.
 
+
 <h3>Data Pre- Processing:</h3>
 
 Next we applied data cleaning, feature selection, and feature engineering methods.
 
-* Cleaning : Replacing missing value with predicted genres using ML algorithm and dropping rows with outliers (z score > three std). One duplicate row was dropped.
+* **Cleaning** : Replacing missing value with predicted genres using ML algorithm and dropping rows with outliers (z score > three std). One duplicate row was dropped.
 
-* Feature selection: The "Id" column was dropped (it's not a feature). The "pop" (popularity) feature column was dropped ... "pop" was not predictive of top genre.
+* **Feature selection**: The "Id" column was dropped (it's not a feature). The "pop" (popularity) feature column was dropped ... "pop" was not predictive of top genre.
 
-* Feature engineering: The text features "title", "artist", and "top genre" were one-hot encoded.
+* **Feature engineering**: The text features "title", "artist", and "top genre" were one-hot encoded.
+
+
+<h3>Train Models:</h3>
+
+Below are the models used with the hyper parameters provided to train the Classification and Regression Problem and the results with it.
+
+* **Classification** : 
+
+LR_model = LogisticRegression(C=91, max_iter=1000, penalty='l1', solver='liblinear', random_state);
+<br>
+Validation Score : 52.81%
+
+SVC_model = SVC(C=1.6, gamma='scale', kernel='sigmoid', random_state=42);
+<br>
+Validation Score : 37.17%
+
+RFC_model = RandomForestClassifier(n_estimators=400, max_depth=14, random_state=42);
+<br>
+Validation Score : 39.62%
+
+KNN_model = KNeighborsClassifier(n_neighbors=8, weights='uniform', random_state=42);
+<br>
+Validation Score : 34.48%
+
+* **Regression** :
+
+
+
 
