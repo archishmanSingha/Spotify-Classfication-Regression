@@ -21,11 +21,11 @@
 
 * **Outliers** - The default value for the whiskers is 1.5 standard deviations. The boxplots show that some features include data point far beyond the whiskers. While it's difficult to distinguish between significant data points and outliers (noise), we found that most values greater the 3 standards from the mean were noise. *sns.boxplot()* was used to reveal potential outliers.
 
-* **Clusters** -
+* **Clusters** - The t-SNE plot below indicates that the songs cluster in a nonrandom way and that there pattern that may be exploited for classification and regression.
 
-* **Data Exploration** - describe, info , value counts
+* **Data Exploration** - describe(), info() and value counts have been visualized to get better understanding of the data.
 
-* **Principal Component Analysis (PCA)** -  
+* **Principal Component Analysis (PCA)** -  PCA made little difference. Multiplying feature attributes,RandomOverSampling or applying other mathmematical operations on features was not useful.
 
 <h3>Data Pre- Processing:</h3>
 
