@@ -1,6 +1,6 @@
 # Spotify-Classfication-Regression
 
-<h3>Problem Statement:</h3>
+<h2>Problem Statement:</h2>
 
 * A regression problem that aims to predict the popularity score of a song.
 
@@ -47,23 +47,28 @@ Below are the models used with the hyper parameters provided to train the Classi
 * **Classification** : 
 
 LR_model = LogisticRegression(C=91, max_iter=1000, penalty='l1', solver='liblinear', random_state);
-<br>
-Validation Score : 52.81%
 
 SVC_model = SVC(C=1.6, gamma='scale', kernel='sigmoid', random_state=42);
-<br>
-Validation Score : 37.17%
 
 RFC_model = RandomForestClassifier(n_estimators=400, max_depth=14, random_state=42);
-<br>
-Validation Score : 39.62%
 
 KNN_model = KNeighborsClassifier(n_neighbors=8, weights='uniform', random_state=42);
-<br>
-Validation Score : 34.48%
+
+![image](https://github.com/archishmanSingha/Spotify-Classfication-Regression/assets/123219771/3558c3a3-b014-4dc4-9d9e-58e1756e06fc)
 
 * **Regression** :
 
+LR_model = LinearRegression(fit_intercept=True);
+
+SVR_model = SVR(C=12, degree=2, kernel='rbf');
+
+RF_model = RandomForestRegressor(n_estimators=300, max_depth=5);
+
+![image](https://github.com/archishmanSingha/Spotify-Classfication-Regression/assets/123219771/928aeea5-8229-40b0-8e1c-f58fd15248fb)
+
+<h3>Results:</h3>
+
+Hence, from the above results we can conclude that LR model performed the best for classification and SVR model performed the best for regression.
 
 
 
