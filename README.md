@@ -29,3 +29,11 @@
 
 <h3>Data Pre- Processing:</h3>
 
+Next we applied data cleaning, feature selection, and feature engineering methods.
+
+* Cleaning : Replacing missing value with predicted genres using ML algorithm and dropping rows with outliers (z score > three std). One duplicate row was dropped.
+
+* Feature selection: The "Id" column was dropped (it's not a feature). The "pop" (popularity) feature column was dropped ... "pop" was not predictive of top genre.
+
+* Feature engineering: The text features "title", "artist", and "top genre" were one-hot encoded.
+
